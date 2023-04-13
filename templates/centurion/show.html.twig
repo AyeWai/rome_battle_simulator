@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Centurion{% endblock %}
+
+{% block body %}
+    <h1>Centurion</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ centurion.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ centurion.name }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ centurion.age }}</td>
+            </tr>
+            <tr>
+                <th>Time_served</th>
+                <td>{{ centurion.timeServed }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_centurion_index') }}">back to list</a>
+
+    <a href="{{ path('app_centurion_edit', {'id': centurion.id}) }}">edit</a>
+
+    {{ include('centurion/_delete_form.html.twig') }}
+{% endblock %}

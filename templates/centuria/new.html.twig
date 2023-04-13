@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Centuria{% endblock %}
+
+{% block body %}
+    <h1>Create new Centuria</h1>
+
+    {{ include('centuria/_form.html.twig') }}
+
+    <a href="{{ path('app_centuria_index') }}">back to list</a>
+{% endblock %}

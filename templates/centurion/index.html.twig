@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Centurion index{% endblock %}
+
+{% block body %}
+    <h1>Centurion index</h1>
+    <p>{{message}}</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Time_served</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for centurion in centurions %}
+            <tr>
+                <td>{{ centurion.id }}</td>
+                <td>{{ centurion.name }}</td>
+                <td>{{ centurion.age }}</td>
+                <td>{{ centurion.timeServed }}</td>
+                <td>
+                    <a href="{{ path('app_centurion_show', {'id': centurion.id}) }}">show</a>
+                    <a href="{{ path('app_centurion_edit', {'id': centurion.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_centurion_new') }}">Create new</a>
+{% endblock %}

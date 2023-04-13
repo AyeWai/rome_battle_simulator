@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Centurion{% endblock %}
+
+{% block body %}
+    <h1>Edit Centurion</h1>
+
+    {{ include('centurion/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_centurion_index') }}">back to list</a>
+
+    {{ include('centurion/_delete_form.html.twig') }}
+{% endblock %}

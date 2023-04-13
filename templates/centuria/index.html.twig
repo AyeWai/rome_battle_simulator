@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Centuria index{% endblock %}
+
+{% block body %}
+    <h1>Centuria index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Health</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for centurium in centurias %}
+            <tr>
+                <td>{{ centurium.id }}</td>
+                <td>{{ centurium.health }}</td>
+                <td>
+                    <a href="{{ path('app_centuria_show', {'id': centurium.id}) }}">show</a>
+                    <a href="{{ path('app_centuria_edit', {'id': centurium.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_centuria_new') }}">Create new</a>
+{% endblock %}

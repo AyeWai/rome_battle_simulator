@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Centurion{% endblock %}
+
+{% block body %}
+    <h1>Create new Centurion</h1>
+        {% for message in app.flashes('success') %}
+            <div class="flash-info alert alert-info role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {{ include('centurion/_form.html.twig') }}
+
+    <a href="{{ path('app_centurion_index') }}">back to list</a>
+{% endblock %}
