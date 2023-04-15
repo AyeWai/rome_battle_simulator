@@ -23,7 +23,6 @@ class CenturiaRepository extends ServiceEntityRepository
 
     public function save(Centuria $entity, bool $flush = false): void
     {   
-        $entity->setHealth(10);
         $this->getEntityManager()->persist($entity);
 
         if ($flush) {
