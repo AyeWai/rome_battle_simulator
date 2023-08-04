@@ -40,7 +40,7 @@ class Battle
         return $total;
     }
 
-    public function CenturiaFighting( Centuria $centuria1, Centuria $centuria2)
+    public function CenturiaFighting( Centuria $centuria1, Centuria $centuria2):void
     {
         $x = $this->CenturiaStatsCalculator($centuria1);
         $this->logger->info(implode("|",$x));
@@ -63,14 +63,6 @@ class Battle
         #Result
         $centuria1->getHealth() > $centuria2->getHealth() ? $this->logger->info('Centuria 1 won !') : $this->logger->info('Centuria 2 won !');
         $this->logger->info('Centuria 1 Health'. $centuria1->getHealth());
-        $this->logger->info('Centuria 2 Health'. $centuria2->getHealth());
+        $this->logger->info('Centuria 2 Health'. $centuria2->getHealth()); 
     }
 }
-
-/*
-    $total = 0;
-    foreach{$array1 AS $k=>$v){
-    $total += $v*$array2[$k];
-    }
-    echo $total;
-*/

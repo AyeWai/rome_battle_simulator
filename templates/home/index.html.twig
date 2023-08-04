@@ -65,6 +65,9 @@
             <!--=============== HOME ===============-->
             <section class="container section section__height" id="home">
                 <h2 class="section__title">Home</h2>
+                <div id="app">
+                    {{ message }}
+                </div>
             </section>
 
             <!--=============== ABOUT ===============-->
@@ -98,7 +101,8 @@
 
 {% block javascripts %}
      {{ encore_entry_script_tags('app_') }}
- {% endblock %}
+     <script src="{{ asset('vue/app.js') }}"></script>
+{% endblock %}
 
 {% endblock %}
 
