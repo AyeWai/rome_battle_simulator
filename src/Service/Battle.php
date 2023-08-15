@@ -11,6 +11,7 @@ class Battle
     private ?int $range = null;
     private ?int $defense = null;
     private $logger;
+    private ?array $results;
 
     public function __construct(LoggerInterface $logger)
     {
@@ -40,7 +41,7 @@ class Battle
         return $total;
     }
 
-    public function CenturiaFighting( Centuria $centuria1, Centuria $centuria2):void
+    public function CenturiaFighting( Centuria $centuria1, Centuria $centuria2): array
     {
         $x = $this->CenturiaStatsCalculator($centuria1);
         $this->logger->info(implode("|",$x));
@@ -61,8 +62,10 @@ class Battle
             $x[0] < $y[0]? $centuria1->setHealth(($centuria1->getHealth())-$y[0]) : $centuria2->setHealth(($centuria2->getHealth())-2);
         }
         #Result
-        $centuria1->getHealth() > $centuria2->getHealth() ? $this->logger->info('Centuria 1 won !') : $this->logger->info('Centuria 2 won !');
-        $this->logger->info('Centuria 1 Health'. $centuria1->getHealth());
-        $this->logger->info('Centuria 2 Health'. $centuria2->getHealth()); 
+        $centuria1->getHealth() > $centuria2->getHealth() ? $results[] = 'Centuria 1 won !': $results[] = 'Centuria 2 won !';
+        $results[] = "Centuria 1 Health".strval($centuria1->getHealth());
+        $results[] = 'Centuria 2 Health'. strval($centuria2->getHealth());
+        var_dump($results);
+        return $results; 
     }
 }

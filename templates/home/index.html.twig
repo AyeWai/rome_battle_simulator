@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{controller_name}}{% endblock %}
+{% block title %}{{message}}{% endblock %}
 
 {% block body %}
 <!DOCTYPE html>
@@ -65,9 +65,53 @@
             <!--=============== HOME ===============-->
             <section class="container section section__height" id="home">
                 <h2 class="section__title">Home</h2>
-                <div id="app">
-                    {{ message }}
+                <div class="card_container">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ asset('build/images/roman_units.jpg')}}" alt="roman_unit_card1">
+                    <div class="card-body">
+                        <h5 class="card-title">Première centuria à combattre</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
                 </div>
+
+                {# <div id="app">
+                    {% for result in results %}
+                        <li>{{ result }}</li>
+                    {% endfor %}
+                </div> #}
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ asset('build/images/roman_units_blue.jpg')}}" alt="roman_unit_card2">
+                    <div class="card-body">
+                        <h5 class="card-title">Deuxième centuria à combattre</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+                </div>
+                <div class="launch_battle_container">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                        Launch To battle !
+                    </button>
+                </div>
+
             </section>
 
             <!--=============== ABOUT ===============-->
@@ -95,14 +139,9 @@
     </body>
 </html>
 
-{% block stylesheets %}
-     {{ encore_entry_link_tags('app_') }}
- {% endblock %}
+{% block stylesheets %} {{ encore_entry_link_tags('app_') }}{% endblock %}
 
-{% block javascripts %}
-     {{ encore_entry_script_tags('app_') }}
-     <script src="{{ asset('vue/app.js') }}"></script>
-{% endblock %}
+{% block javascripts %}{{ encore_entry_script_tags('app_') }}{% endblock %}
 
 {% endblock %}
 

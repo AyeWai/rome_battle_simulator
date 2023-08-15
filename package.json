@@ -5,11 +5,11 @@
         "@hotwired/stimulus": "^3.0.0",
         "@symfony/stimulus-bridge": "^3.2.0",
         "@symfony/webpack-encore": "^4.0.0",
-        "bootstrap": "^5.2.3",
+        "bootstrap": "^5.3.1",
         "core-js": "^3.23.0",
+        "file-loader": "^6.0.0",
         "regenerator-runtime": "^0.13.9",
         "sass": "^1.62.0",
-        "sass-loader": "^13.0.0",
         "ts-loader": "^9.0.0",
         "typescript": "^5.0.4",
         "vue": "^2.7.14",
@@ -28,7 +28,9 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@popperjs/core": "^2.11.7",
-        "boxicons": "^2.1.4"
+        "@popperjs/core": "^2.11.8",
+        "boxicons": "^2.1.4",
+        "css-loader": "^6.8.1",
+        "sass-loader": "^13.3.2"
     }
 }

@@ -15,20 +15,22 @@ class HomeController extends AbstractController
     #[Route('/home', name: 'app_home')]
     public function index(Battle $battle, CenturiaRepository $centuriaRepository): Response
     {  
+
         $c1 = $centuriaRepository->findOneBy(['id' => 1]);
         if (!$c1) {
             throw new \Exception('First centuria not found');
         }
         
-        $c2 = $centuriaRepository->findOneBy(['id' => 3]);
+        $c2 = $centuriaRepository->findOneBy(['id' => 2]);
         if (!$c2) {
             throw new \Exception('Second centuria not found');
         }
         
-        $battle->CenturiaFighting($c1, $c2);
+        $results = $battle->CenturiaFighting($c1, $c2);
             
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
+            'message' => 'Home Controller Message',
+            'results' => $results,
         ]);
-}
+    }
 }
