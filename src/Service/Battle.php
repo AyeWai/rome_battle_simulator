@@ -65,7 +65,6 @@ class Battle
         $centuria1->getHealth() > $centuria2->getHealth() ? $results[] = 'Centuria 1 won !': $results[] = 'Centuria 2 won !';
         $results[] = "Centuria 1 Health".strval($centuria1->getHealth());
         $results[] = 'Centuria 2 Health'. strval($centuria2->getHealth());
-        var_dump($results);
         return $results; 
     }
 }
