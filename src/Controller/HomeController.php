@@ -7,13 +7,14 @@ use App\Service\Battle;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Service\Provider\CenturiaProvider;
 
 use function PHPUnit\Framework\throwException;
 
 class HomeController extends AbstractController
 {
     #[Route('/home', name: 'app_home')]
-    public function index(Battle $battle, CenturiaRepository $centuriaRepository): Response
+    public function index(Battle $battle, CenturiaRepository $centuriaRepository, CenturiaProvider $centuriaProvider): Response
     {  
 
         $c1 = $centuriaRepository->findOneBy(['id' => 1]);
@@ -31,6 +32,7 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'message' => 'Home Controller Message',
             'results' => $results,
+            'centurias' =>$centuriaProvider->getCenturias(),
         ]);
     }
 }

@@ -26,6 +26,9 @@ class Centuria
     #[ORM\Column]
     private ?int $health = null;
 
+    #[ORM\Column(length: 255)]
+    private string $name = 'Legio I';
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +78,18 @@ class Centuria
     public function setHealth(int $health): self
     {
         $this->health = $health;
+
+        return $this;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
 
         return $this;
     }

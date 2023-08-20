@@ -73,9 +73,9 @@
                         <p class="card-text">{{ 'home.centuria-description-one'|trans|raw}}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Centuria 1</li>
-                        <li class="list-group-item">Centuria 2</li>
-                        <li class="list-group-item">Centuria 3</li>
+                    {% for centuria in centurias %}
+                        <li class="list-group-item">{{ centuria.name }}</li>
+                    {% endfor %}
                     </ul>
                     <div class="card-body">
                         <a href="#" class="card-link">Card link</a>
@@ -96,9 +96,9 @@
                         <p class="card-text">{{ 'home.centuria-description-two'|trans|raw}}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Centuria 1</li>
-                        <li class="list-group-item">Centuria 2</li>
-                        <li class="list-group-item">Centuria 3</li>
+                    {% for centuria in centurias %}
+                        <li class="list-group-item">{{ centuria.name }}</li>
+                    {% endfor %}
                     </ul>
                     <div class="card-body">
                         <a href="#" class="card-link">Card link</a>
