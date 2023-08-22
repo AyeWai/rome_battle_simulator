@@ -60,3 +60,10 @@ function selectCenturia(){
 }
 
 window.addEventListener('click', selectCenturia)
+
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})

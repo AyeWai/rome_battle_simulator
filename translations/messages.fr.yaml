@@ -1,3 +1,8 @@
 home:
   title: Bataille de Centuria
-  launch_button: Lancer la bataille 
+  launch_button: Lancer la bataille
+
+modal:
+  results: Résultats
+  close: Fermer
+  save: Sauvegarder modifications

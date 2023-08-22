@@ -4,4 +4,9 @@ home:
   centuria-title-one : First centuria to fight
   centuria-title-two : Second centuria to fight
   centuria-description-one : Imperator, these mens are ready to give their lives for you !
-  centuria-description-two : These are fight-thirsty soldiers that will follow you till glory. 
+  centuria-description-two : These are fight-thirsty soldiers that will follow you till glory.
+
+modal:
+  results: Results
+  close: Close
+  save: Save Changes

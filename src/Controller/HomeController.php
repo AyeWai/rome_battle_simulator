@@ -16,6 +16,15 @@ class HomeController extends AbstractController
     #[Route('/home', name: 'app_home')]
     public function index(Battle $battle, CenturiaRepository $centuriaRepository, CenturiaProvider $centuriaProvider): Response
     {  
+        
+        return $this->render('home/index.html.twig', [
+            'message' => 'Home Controller Message',
+            'centurias' =>$centuriaProvider->getCenturias(),
+        ]);
+    
+    }#[Route('/battle', name: 'app_battle')]
+    public function battle(Battle $battle, CenturiaRepository $centuriaRepository, CenturiaProvider $centuriaProvider): Response
+    {  
 
         $c1 = $centuriaRepository->findOneBy(['id' => 1]);
         if (!$c1) {
