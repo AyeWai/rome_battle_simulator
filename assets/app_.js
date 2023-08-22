@@ -19,7 +19,7 @@ import 'boxicons';
 import 'bootstrap';
 //import bsCustomFileInput from 'bs-custom-file-input';
 
-bsCustomFileInput.init();
+//bsCustomFileInput.init();
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -50,3 +50,13 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
+function selectCenturia(){
+    var navItems = document.querySelectorAll(".list-group-item");
+    for (var i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener("click", function() {
+        this.classList.add("selected-centuria");
+    });
+    } 
+}
+
+window.addEventListener('click', selectCenturia)
