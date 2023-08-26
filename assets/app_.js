@@ -53,13 +53,16 @@ window.addEventListener('scroll', scrollHeader)
 function selectCenturia(){
     var navItems = document.querySelectorAll(".list-group-item");
     for (var i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener("click", function() {
-        this.classList.add("selected-centuria");
+        navItems[i].addEventListener("click", function() {
+        //var selectedNavItems = navItems.classList.getElementsByClassName("selected-centuria")
+        //selectedNavItems[i].classList.remove("selected-centuria")
+        this.classList.add("selected-centuria")
     });
     } 
 }
 
 window.addEventListener('click', selectCenturia)
+
 
 const myModal = document.getElementById('myModal')
 const myInput = document.getElementById('myInput')

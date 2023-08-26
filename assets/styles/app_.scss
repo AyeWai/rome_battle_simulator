@@ -75,6 +75,7 @@ img {
   color: var(--title-color);
   text-align: center;
   margin-bottom: 1.5rem;
+  
 }
 
 .section__height {
@@ -83,9 +84,7 @@ img {
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 968px;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  max-width: 1846px;
 }
 
 /*=============== HEADER ===============*/
@@ -242,12 +241,12 @@ img {
 }
 
 /* For large devices */
-@media screen and (min-width: 1024px) {
+/*@media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
     margin-right: auto;
   }
-}
+}*/
 
 #portfolio_frame{
   text-align: center;
@@ -272,21 +271,28 @@ img {
   display: flex;
   justify-content: space-between;
 }
+.card{
+  margin: 0 10em 0 10em;
+}
 
 #roman_unit_card1{
   box-shadow: inset 0 0 99999px rgba(255, 0, 0, 0.7);
 }
 #roman_unit_card2{
-  background-color: rgba(0, 0, 255, 0.7);
+  box-shadow: inset 0 0 99999px rgba(0, 0, 255, 0.7);
 }
 
 .launch_battle_container
 {
-  margin: 5em;
+  margin: 0;
   text-align: center;
 }
 
 .selected-centuria{
   background-color:#ffbf00;
+}
+
+.container h2{
+  color: #FFF;
 }
 
