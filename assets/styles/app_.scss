@@ -210,7 +210,7 @@ img {
     height: calc(var(--header-height) + 1.5rem); /* 4.5rem */
   }
   .nav__img {
-    display: none;
+    display: true;
   }
   .nav__icon {
     display: none;
@@ -248,25 +248,6 @@ img {
   }
 }*/
 
-#portfolio_frame{
-  text-align: center;
-  margin:  auto;
-  width: 30vw;
-  height: 20vh;
-  border: solid;
-  border-color: black;
-
-}
-
-#neuralnetwork_frame{
-  text-align: center;
-  margin:  auto;
-  width: 30vw;
-  height: 20vh;
-  border: solid;
-  border-color: black;
-}
-
 .card_container{
   display: flex;
   justify-content: space-between;
@@ -292,7 +273,66 @@ img {
   background-color:#ffbf00;
 }
 
-.container h2{
-  color: #FFF;
+.container h2, .container h3{
+  color: #fff;
+}
+
+section#contact .section-heading {
+  color: #fff;
+}
+
+section#contact .form-group {
+  margin-bottom: 25px;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+  padding: 20px;
+  margin: auto;
+}
+
+section#contact .form-group input.form-control {
+  height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+  min-height: 3.2em;
+}
+
+section#contact .form-control:focus {
+  border-color: #1ee2e7;
+  box-shadow: none;
+}
+
+section#contact::-webkit-input-placeholder {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  color: #bbb;
+}
+
+section#contact:-moz-placeholder {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  color: #bbb;
+}
+
+section#contact::-moz-placeholder {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  color: #bbb;
+}
+
+section#contact:-ms-input-placeholder {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  color: #bbb;
+}
+
+section#contact .text-danger {
+  color: #e74c3c;
 }
 

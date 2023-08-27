@@ -10,3 +10,19 @@ modal:
   results: Results
   close: Close
   save: Save Changes
+
+about:
+  title: About
+
+training:
+  title: Units Training
+
+contact:
+  title: Contact Us
+  subtitle: Feedback is always appreciated
+  name: Name *
+  mail: Email *
+  phone: Phone *
+  message: Message *
+  send: Send Message
+
