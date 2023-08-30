@@ -50,19 +50,37 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-function selectCenturia(){
-    var navItems = document.querySelectorAll(".list-group-item");
-    for (var i = 0; i < navItems.length; i++) {
-        navItems[i].addEventListener("click", function() {
-        //var selectedNavItems = navItems.classList.getElementsByClassName("selected-centuria")
-        //selectedNavItems[i].classList.remove("selected-centuria")
-        this.classList.add("selected-centuria")
-    });
-    } 
+/*function selectCenturia(event) {
+    if (event.target.classList.contains("selected-centuria")) {
+        event.target.classList.remove("selected-centuria")
+    }else if (event.target.classList.contains("list-group-item")) {
+        event.target.classList.add("selected-centuria")
+    }
 }
 
-window.addEventListener('click', selectCenturia)
+window.addEventListener('click', selectCenturia);*/
 
+var itemList = document.querySelectorAll("li.list-group-item.first-centuria")
+console.log(itemList)
+
+function handleItemClick(event) {
+    var clickedElement = event.target
+
+    // Retirer la classe selected-centuria de tous les éléments de la liste
+    itemList.forEach(function(item) {
+        item.classList.remove("selected-centuria");
+    });
+
+    // Ajouter la classe selected-centuria à l'élément cliqué
+    clickedElement.classList.add("selected-centuria")
+    
+}
+
+// Ajouter des écouteurs d'événements à chaque élément de la liste
+itemList.forEach(function(item) {
+    item.addEventListener('click', handleItemClick)
+})
+console.log(itemList)
 
 const myModal = document.getElementById('myModal')
 const myInput = document.getElementById('myInput')
@@ -70,3 +88,5 @@ const myInput = document.getElementById('myInput')
 myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
+
+
