@@ -7,12 +7,14 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class Centuria2Type extends AbstractType
+class CenturiaType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->add('id')
             ->add('health')
+            ->add('name')
             ->add('centurion')
             ->add('cohort')
             ->add('centuriatype')

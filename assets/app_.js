@@ -61,7 +61,6 @@ window.addEventListener('scroll', scrollHeader)
 window.addEventListener('click', selectCenturia);*/
 
 var itemList = document.querySelectorAll("li.list-group-item.first-centuria")
-console.log(itemList)
 
 function handleItemClick(event) {
     var clickedElement = event.target
@@ -69,10 +68,14 @@ function handleItemClick(event) {
     // Retirer la classe selected-centuria de tous les éléments de la liste
     itemList.forEach(function(item) {
         item.classList.remove("selected-centuria");
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        checkbox.checked = false; // Inverse l'état de la case à cocher
     });
 
     // Ajouter la classe selected-centuria à l'élément cliqué
     clickedElement.classList.add("selected-centuria")
+    const checkbox = clickedElement.querySelector('input[type="checkbox"]');
+    checkbox.checked = !checkbox.checked; // Inverse l'état de la case à cocher
     
 }
 
@@ -80,7 +83,31 @@ function handleItemClick(event) {
 itemList.forEach(function(item) {
     item.addEventListener('click', handleItemClick)
 })
-console.log(itemList)
+
+var itemList2 = document.querySelectorAll("li.list-group-item.second-centuria")
+
+function handleItemClick2(event) {
+    var clickedElement = event.target
+
+    // Retirer la classe selected-centuria de tous les éléments de la liste
+    itemList2.forEach(function(item) {
+        item.classList.remove("selected-centuria");
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        checkbox.checked = false; // Inverse l'état de la case à cocher
+    });
+
+    // Ajouter la classe selected-centuria à l'élément cliqué
+    clickedElement.classList.add("selected-centuria")
+    const checkbox = clickedElement.querySelector('input[type="checkbox"]');
+    checkbox.checked = !checkbox.checked; // Inverse l'état de la case à cocher
+    
+}
+
+// Ajouter des écouteurs d'événements à chaque élément de la liste
+itemList2.forEach(function(item) {
+    item.addEventListener('click', handleItemClick2)
+})
+
 
 const myModal = document.getElementById('myModal')
 const myInput = document.getElementById('myInput')

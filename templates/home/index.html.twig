@@ -65,9 +65,11 @@
                         <p class="card-text">{{ 'home.centuria-description-one'|trans|raw}}</p>
                     </div>
                     <ul class="list-group list-group-flush">
+                    <form method="post" action="{{ path('app_battle') }}">
                     {% for centuria in centurias %}
-                        <li class="list-group-item first-centuria"><input type="checkbox" id="first-centuria-checkbox-{{ centuria.id }}" name="first-centuria-checkbox-{{ centuria.id }}" /><label for="first-centuria-checkbox-{{ centuria.id }}">{{ centuria.name }}</label></li>
-
+                        <li class="list-group-item first-centuria">{{ centuria.name }}
+                            <input type="checkbox" name="first_centuria_id"  value="{{ centuria.id }}" />
+                        </li>
                     {% endfor %}
                     </ul>
                     <div class="card-body">
@@ -75,6 +77,14 @@
                         <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
+
+                {% if results is defined %}
+                    <div class="alert alert-success">
+                        {% for result in results %}
+                            <li>{{ result }}</li>
+                        {% endfor %}
+                    </div>
+                {% endif %}
 
                 <div class="card" style="width: 18rem;">
                     <img src="{{ asset('build/images/roman_units_blue.jpg')}}" alt="roman_unit_card2">
@@ -84,7 +94,9 @@
                     </div>
                     <ul class="list-group list-group-flush">
                     {% for centuria in centurias %}
-                        <li class="list-group-item second-centuria"><input type="checkbox" id="second-centuria-checkbox-{{ centuria.id }}" name="second-centuria-checkbox-{{ centuria.id }}" /><label for="second-centuria-checkbox-{{ centuria.id }}">{{ centuria.name }}</label></li>
+                        <li class="list-group-item second-centuria">{{ centuria.name }}
+                            <input type="checkbox" name="second_centuria_id{{ centuria.id }}"  value="{{ centuria.id }}" />
+                        </li>
                     {% endfor %}
                     </ul>
                     <div class="card-body">
@@ -95,10 +107,12 @@
                 </div>
                 <!-- Button trigger modal -->
                 <div class="launch_battle_container">
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <!--<button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">-->
+                    <button type="submit" class="btn btn-danger" >
                         {{ 'home.launch-button'|trans|raw }}
                     </button>
                 </div>
+                </form>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

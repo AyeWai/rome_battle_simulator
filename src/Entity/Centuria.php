@@ -29,6 +29,10 @@ class Centuria
     #[ORM\Column(length: 255)]
     private string $name = 'Legio I';
 
+    private ?int $melee = null ;
+    private ?int $range = null;
+    private ?int $defense = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -92,5 +96,28 @@ class Centuria
         $this->name = $name;
 
         return $this;
+    }
+
+    public function CenturiaStatsCalculator(Centuria $centuria): array
+    {
+        
+        $stats = []; 
+        $coeffarray =[];
+        #Build centuria stats array
+        $this->melee = $centuria->getCenturiaType()->getMelee();
+        $this->range = $centuria->getCenturiaType()->getRange();
+        $this->defense = $centuria->getCenturiaType()->getDefense();
+        $centurion = $centuria->getCenturion();
+        array_push($stats, $this->melee,  $this->range, $this->defense);
+        #Build centurion stats array
+        $coeff = $centurion->getCenturionType();
+        $meleecoeff = $coeff->getMeleecoeff();
+        $rangecoeff = $coeff->getRangecoeff();
+        $defensecoeff = $coeff->getDefensecoeff();
+        array_push($coeffarray, $meleecoeff,  $rangecoeff, $defensecoeff);
+        #Multiplying the integers between the two arrays
+        $total = array_map(function($x, $y) { return $x * $y; },$stats, $coeffarray);
+        #$this->logger->info(implode("|",$total));
+        return $total;
     }
 }
