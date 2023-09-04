@@ -33,7 +33,6 @@ class HomeController extends AbstractController
             
         return $this->render('home/index.html.twig', [
             'message' => 'Home',
-            'results' => $results,
             'centurias' =>$centuriaProvider->getCenturias(),
         ]);
     }
@@ -41,16 +40,14 @@ class HomeController extends AbstractController
     #[Route('/battle', name: 'app_battle')]
     public function index(Request $request,Battle $battle, CenturiaRepository $centuriaRepository, CenturiaProvider $centuriaProvider): Response
     {  
-        dd($request);
-        $first_centuria_id = $request->request->get('first_centuria_id');
-        $second_centuria_id = $request->request->get('second_centuria_id');
-
-        $c1 = $centuriaRepository->findOneBy(['id' => $first_centuria_id]);
+        $request_array = $request->request->all();
+        $centurias_ids = array_values($request_array);
+        $c1 = $centuriaRepository->findOneBy(['id' => $centurias_ids[0]]);
         if (!$c1) {
             throw new \Exception('First centuria not found');
         }
         
-        $c2 = $centuriaRepository->findOneBy(['id' =>  $second_centuria_id]);
+        $c2 = $centuriaRepository->findOneBy(['id' =>  $centurias_ids[1]]);
         if (!$c2) {
             throw new \Exception('Second centuria not found');
         }
