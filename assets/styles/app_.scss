@@ -336,9 +336,7 @@ section#contact .text-danger {
   color: #e74c3c;
 }
 
-
-
 input[type="checkbox"] {
-  flex: 1; /* Le checkbox occupe tout l'espace disponible */
+  display: none;
 }
 
