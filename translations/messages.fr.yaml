@@ -1,8 +1,34 @@
 home:
   title: Bataille de Centuria
-  launch_button: Lancer la bataille
+  launch-button: Lancer la bataille
+  centuria-title-one : Première centurie au combat
+  centuria-title-two : Deuxième centurie au combat
+  centuria-description-one: "Imperator, ces hommes sont prêts à donner leur vie pour vous !"
+  centuria-description-two: "Ce sont des soldats assoiffés de combat qui vous suivront jusqu'à la gloire."
 
 modal:
-  results: Résultats
-  close: Fermer
-  save: Sauvegarder modifications
+  results: "Résultats"
+  close: "Fermer"
+  save: "Sauvegarder les modifications"
+
+about:
+  title: "À propos"
+  first-title: "La Légion romaine : une force inégalée"
+  first-paragraph: "La Légion romaine était une formation militaire légendaire de l'Antiquité, renommée pour sa discipline, son efficacité et sa capacité d'adaptation sur le champ de bataille. Composée de milliers de soldats romains appelés légionnaires, elle pouvait varier en taille, mais une Légion typique comptait environ 5 000 hommes. La Légion était organisée de manière hiérarchique, avec diverses sous-unités travaillant en tandem pour former une force de combat harmonieuse. Parmi ces sous-unités, la centurie avait une importance particulière."
+  second-title: "La Centurie : l'unité de base"
+  second-paragraph: "La centurie était l'équivalent d'une compagnie dans les armées modernes, mais elle avait une importance distincte au sein de la Légion romaine. Elle était dirigée par un centurion, un officier expérimenté et respecté. Le centurion était l'homme qui inculquait la discipline et la bravoure au sein de sa centurie et était généralement promu en fonction de son courage et de ses compétences au combat. Chaque centurie était composée d'environ 80 hommes, appelés centurions, qui étaient à leur tour regroupés en dix cohortes au sein de la Légion. La centurie était une unité autonome pouvant être déployée indépendamment ou en coordination avec d'autres centuriae pour former une force plus importante."
+  third-title: "Rôles et fonctions de la Centurie"
+  third-paragraph: "La centurie remplissait un large éventail de fonctions au sein de la Légion romaine. En tant qu'unité de base, elle était responsable de la formation, de la discipline et de l'exécution des ordres sur le champ de bataille. Chaque centurion avait pour devoir de maintenir l'ordre et de s'assurer que les soldats de sa centurie étaient bien formés et prêts au combat. Lors des batailles, la centurie était déployée en première ligne, où elle jouait un rôle crucial dans l'engagement initial avec l'ennemi. Le centurion menait souvent la charge, donnant l'exemple à ses hommes."
+  last-paragraph: "Roman Battle Simulator est un jeu de navigateur web captivant qui plonge les joueurs dans le monde épique des légions romaines et de leurs centuriae de l'Antiquité. En tant que jeune centurion, les joueurs recrutent, forment et dirigent leur propre centurie de soldats romains, participent à des batailles, prennent des décisions stratégiques et personnalisent leurs unités. Le jeu offre une expérience stratégique, permettant aux joueurs de gravir les échelons de la hiérarchie militaire romaine pour finalement viser la gloire sur le champ de bataille et dans les annales de l'histoire."
+
+training:
+  title: "Formation des unités"
+
+contact:
+  title: "Contactez-nous"
+  subtitle: "Vos retours sont toujours appréciés"
+  name: "Nom *"
+  mail: "Email *"
+  phone: "Téléphone *"
+  message: "Message *"
+  send: "Envoyer le message"

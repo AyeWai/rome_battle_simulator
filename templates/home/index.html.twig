@@ -23,31 +23,36 @@
                         <li class="nav__item">
                             <a href="#battle" class="nav__link active-link">
                                 <i class='bx bx-home-alt nav__icon'></i>
-                                <span class="nav__name">Battle</span>
+                                <span class="nav__name">{{ 'home.title'|trans|raw }}</span>
                             </a>
                         </li>
                         
                         <li class="nav__item">
                             <a href="#about" class="nav__link">
                                 <i class='bx bx-user nav__icon'></i>
-                                <span class="nav__name">About</span>
+                                <span class="nav__name">{{ 'about.title'|trans|raw }}</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
                             <a href="#training" class="nav__link">
                                 <i class='bx bx-briefcase-alt nav__icon'></i>
-                                <span class="nav__name">Training</span>
+                                <span class="nav__name">{{ 'training.title'|trans|raw }}</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
                             <a href="#contactus" class="nav__link">
                                 <i class='bx bx-message-square-detail nav__icon'></i>
-                                <span class="nav__name">Contact Us</span>
+                                <span class="nav__name">{{ 'contact.title'|trans|raw }}</span>
                             </a>
                         </li>
-                        <img src="{{ asset('build/images/english_flag.png')}}" alt="" class="nav__img">
+                        <a href="{{ path('change_language', {'locale': 'en' }) }}">
+                            <img src="{{ asset('build/images/english_flag.png')}}" alt="" class="nav__img">
+                        </a>
+                        <a href="{{ path('change_language', {'locale': 'fr' }) }}">
+                            <img src="{{ asset('build/images/french_flag.png')}}" alt="" class="nav__img">
+                        </a>
                     </ul>
                 </div>
             </nav>
@@ -122,10 +127,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <h4 class="alternate-title">The Roman Legion: An Unparalleled Force</h4>
-                            <p class="alternate-paragraph">The Roman Legion was a legendary military formation of antiquity, renowned for its discipline, efficiency, and adaptability on the battlefield. Comprising thousands of Roman soldiers known as legionaries, it could vary in size, but a typical Legion consisted of around 5,000 men.
-                            The Legion was hierarchically organized, with various subunits working in tandem to form a harmonious fighting force. Among these subunits, the centuria held particular significance.
-                            </p>
+                            <h4 class="alternate-title">{{ 'about.first-title'|trans|raw}}</h4>
+                            <p class="alternate-paragraph">{{ 'about.first-paragraph'|trans|raw}}</p>
                         </div>
                         <div class="col-md-6">
                         </div>
@@ -134,18 +137,14 @@
                         <div class="col-md-6">
                         </div>
                         <div class="col-md-6">
-                            <h4 class="alternate-title">The Centuria: The Basic Unit</h4>
-                            <p class="alternate-paragraph">The centuria was the equivalent of a company in modern armies, but it had a distinct importance within the Roman Legion. It was led by a centurion, an experienced and respected officer. The centurion was the man who instilled discipline and bravery within his centuria and was typically promoted based on his courage and combat skills.
-                            Each centuria consisted of approximately 80 men, referred to as centurions, who were, in turn, grouped into ten cohorts within the Legion. The centuria was an autonomous unit that could be deployed independently or in coordination with other centuriae to form a larger force.
-                            </p>
+                            <h4 class="alternate-title">{{ 'about.second-title'|trans|raw}}</h4>
+                            <p class="alternate-paragraph">{{ 'about.second-paragraph'|trans|raw}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <h4 class="alternate-title">Roles and Functions of the Centuria</h4>
-                            <p class="alternate-paragraph">The centuria fulfilled a wide range of functions within the Roman Legion. As the basic unit, it was responsible for training, discipline, and executing orders on the battlefield. Each centurion had the duty of maintaining order and ensuring that the soldiers in his centuria were well-trained and ready for combat.
-                            During battles, the centuria was deployed on the front lines, where it played a crucial role in the initial engagement with the enemy. The centurion often led the charge, setting an example for his men.
-                            </p>
+                            <h4 class="alternate-title">{{ 'about.third-title'|trans|raw}}</h4>
+                            <p class="alternate-paragraph">{{ 'about.third-paragraph'|trans|raw}}</p>
                         </div>
                         <div class="col-md-6">
                         </div>
@@ -155,9 +154,7 @@
                             <p class="alternate-paragraph"></p>
                         </div>
                         <div class="col-md-10">
-                            <p class="alternate-paragraph-last">
-                            "Roman Battle Simulator" is an engaging web-browser game that immerses players in the epic world of Roman legions and their centuriae during antiquity. As a fledgling centurion, players recruit, train, and lead their own centuria of Roman troops, engaging in battles, making strategic decisions, and customizing their units. The game offers a strategy experience, allowing players to experience the rise through the ranks of the Roman military hierarchy, ultimately aiming to achieve glory on the battlefield and in the annals of history.
-                            </p>
+                            <p class="alternate-paragraph-last">{{ 'about.last-paragraph'|trans|raw}}<</p>
                         </div>
                         <div class="col-md-1">
                             <p class="alternate-paragraph"></p>

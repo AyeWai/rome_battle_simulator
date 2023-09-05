@@ -13,13 +13,13 @@ modal:
 
 about:
   title: About
-  first-title:
-  first-paragraph:
-  second-title:
-  second-paragraph:
-  third-title:
-  third-paragraph:
-  last-paragraph:
+  first-title: "The Roman Legion: An Unparalleled Force"
+  first-paragraph: The Roman Legion was a legendary military formation of antiquity, renowned for its discipline, efficiency, and adaptability on the battlefield. Comprising thousands of Roman soldiers known as legionaries, it could vary in size, but a typical Legion consisted of around 5,000 men. The Legion was hierarchically organized, with various subunits working in tandem to form a harmonious fighting force. Among these subunits, the centuria held particular significance.
+  second-title: "The Centuria: The Basic Unit"
+  second-paragraph: The centuria was the equivalent of a company in modern armies, but it had a distinct importance within the Roman Legion. It was led by a centurion, an experienced and respected officer. The centurion was the man who instilled discipline and bravery within his centuria and was typically promoted based on his courage and combat skills. Each centuria consisted of approximately 80 men, referred to as centurions, who were, in turn, grouped into ten cohorts within the Legion. The centuria was an autonomous unit that could be deployed independently or in coordination with other centuriae to form a larger force.
+  third-title: Roles and Functions of the Centuria
+  third-paragraph: The centuria fulfilled a wide range of functions within the Roman Legion. As the basic unit, it was responsible for training, discipline, and executing orders on the battlefield. Each centurion had the duty of maintaining order and ensuring that the soldiers in his centuria were well-trained and ready for combat. During battles, the centuria was deployed on the front lines, where it played a crucial role in the initial engagement with the enemy. The centurion often led the charge, setting an example for his men.
+  last-paragraph: Roman Battle Simulator is an engaging web-browser game that immerses players in the epic world of Roman legions and their centuriae during antiquity. As a fledgling centurion, players recruit, train, and lead their own centuria of Roman troops, engaging in battles, making strategic decisions, and customizing their units. The game offers a strategy experience, allowing players to experience the rise through the ranks of the Roman military hierarchy, ultimately aiming to achieve glory on the battlefield and in the annals of history.
 
 training:
   title: Units Training
