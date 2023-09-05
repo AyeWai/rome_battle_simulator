@@ -85,7 +85,10 @@ img {
 /*=============== LAYOUT ===============*/
 .container {
   max-width: 1846px;
+  min-width: 1650px;
+  box-sizing: border-box; /* Assurez-vous que la taille totale inclut le padding */
 }
+
 
 /*=============== HEADER ===============*/
 .header {
@@ -241,12 +244,12 @@ img {
 }
 
 /* For large devices */
-/*@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
     margin-right: auto;
   }
-}*/
+}
 
 .card_container{
   display: flex;
@@ -273,11 +276,16 @@ img {
   background-color:#ffbf00;
 }
 
-.container h2, .container h3{
+.container h2, .container h3, .alternate-title, .alternate-paragraph-last {
   color: #fff;
+  font-weight: bold;
 }
 
-section#contact .section-heading {
+.container h5{
+  font-weight: bold;
+}
+
+section#contact .section-heading, section#about .alternate-paragraph{
   color: #fff;
 }
 
@@ -339,4 +347,5 @@ section#contact .text-danger {
 input[type="checkbox"] {
   display: none;
 }
+
 

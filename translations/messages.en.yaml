@@ -13,6 +13,13 @@ modal:
 
 about:
   title: About
+  first-title:
+  first-paragraph:
+  second-title:
+  second-paragraph:
+  third-title:
+  third-paragraph:
+  last-paragraph:
 
 training:
   title: Units Training
@@ -25,4 +32,3 @@ contact:
   phone: Phone *
   message: Message *
   send: Send Message
-
