@@ -42,6 +42,9 @@ class HomeController extends AbstractController
     {  
         $request_array = $request->request->all();
         $centurias_ids = array_values($request_array);
+        if (!$centurias_ids) {
+            throw new \Exception("Centurias haven't been selected");
+        }
         $c1 = $centuriaRepository->findOneBy(['id' => $centurias_ids[0]]);
         if (!$c1) {
             throw new \Exception('First centuria not found');
