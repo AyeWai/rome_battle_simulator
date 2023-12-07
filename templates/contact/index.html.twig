@@ -4,17 +4,22 @@
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 20%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>THANK YOU FOR THE FEEDBACK!</h1>
-    <p>Thank you <strong>{{ username }}</strong>for visiting our website.</p>
-    <p> We'll reach out to you as soon as possible</p>
+<div class="mail-container">
+    <div class="example-wrapper">
+        <h1>THANK YOU FOR THE FEEDBACK !</h1>
+        <p>Thank you <strong>{{ username }}</strong>for visiting our website.</p>
+        <p> We'll reach out to you as soon as possible</p>
 
-    
-    <p>Best regards,</p>
-    <p>Roman Battle Simulator Team</p>
+        
+        <p>Best regards,</p>
+        <p>Roman Battle Simulator Team</p>
+    </div>
+    <div class="imperator-container">
+        <img src="{{ email.image('@images/marble-imperator.jpg') }}" alt="Imperator-Mail">
+    </div>
 </div>
 {% endblock %}
