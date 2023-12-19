@@ -5,6 +5,7 @@ home:
   centuria-title-two : Deuxième centurie au combat
   centuria-description-one: "Imperator, ces hommes sont prêts à donner leur vie pour vous !"
   centuria-description-two: "Ce sont des soldats assoiffés de combat qui vous suivront jusqu'à la gloire."
+  user : Utilisateur
 
 modal:
   results: "Résultats"
@@ -32,3 +33,7 @@ contact:
   phone: "Téléphone *"
   message: "Message *"
   send: "Envoyer le message"
+
+signin:
+  title: Se connecter
+  you: Vous

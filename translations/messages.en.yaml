@@ -5,6 +5,7 @@ home:
   centuria-title-two : Second centuria to fight
   centuria-description-one : Imperator, these mens are ready to give their lives for you !
   centuria-description-two : These are fight-thirsty soldiers that will follow you till glory.
+  user : User
 
 modal:
   results: Results
@@ -32,3 +33,7 @@ contact:
   phone: Phone *
   message: Message *
   send: Send Message
+
+signin:
+  title: Sign In
+  you: Vous
